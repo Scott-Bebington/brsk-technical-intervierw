@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Processing</title>
+
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body onload="loadIndexes()">
+    <h1>Scrabble Word Generator</h1>
+    <section>
+        <input oninput="checkInputChange()" onkeyup="checkKeyPress(event)" type="text" id="sentence-input" class="input" placeholder="Enter a sentence" />
+
+        <div class="button-container">
+            <button id="fetch-words-button" onclick="fetchWords()">Refresh word list</button>
+            <button id="replace-sentence-button" onclick="replaceSentence()">Replace Sentence</button>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>Original sentence</h2>
+            <p id="original-sentence"></p>
+        </div>
+        <div>
+            <h2>New sentence</h2>
+            <p id="new-sentence"></p>
+        </div>
+    </section>
+    <script src="./functions.js"></script>
+</body>
+
+</html>
